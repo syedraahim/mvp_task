@@ -1,0 +1,17 @@
+.table{
+    --bs-table-accent-bg : #F1FAFE  !important;
+    --bs-table-striped-bg : #fff !important
+}
+.table-accordion {
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.accordion-body{
+    background-color: #F1FAFE  !important;
+}
+.accordion-button::after{
+    display: none;
+}
+.accordion-button{
+    place-content: space-between;
+}
