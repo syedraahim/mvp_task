@@ -29,9 +29,9 @@ const List = () => {
                                         <td>Transaction ID</td>
                                         <td>Amount</td>
                                     </tr>
-                                    {reports.filter(report => report[`${item.itemType === 'gateway' ? 'gatewayId' : 'projectId'}`] === item.id).map(report => (
+                                    {reports.sort((prevReport,nextReport) => prevReport.created.localeCompare(nextReport.created)).filter(report => report[`${item.itemType === 'gateway' ? 'gatewayId' : 'projectId'}`] === item.id).map(report => (
                                         <tr>
-                                            <td>{report.created}</td>
+                                            <td>{report.created.split("-").reverse().join("-")}</td>
                                             <td>{report.paymentId}</td>
                                             <td>{report.amount}</td>
                                         </tr>
